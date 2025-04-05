@@ -1,0 +1,253 @@
+<DOCTYPE! html>
+<html>
+  <head>
+    <title>Artist Website
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        
+      }
+
+      body {
+        background-color: #f8f6e9;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+
+      .background-image {
+        background-image: url('');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vh;
+        display: flex;
+      }
+
+      .logo-left {
+        width: 50vh 50vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 35px;
+      }
+
+      .artist-name {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 34px;
+        margin-top: 19px;
+        margin-left: 0px;
+        letter-spacing: 4px;
+        margin-right: 0;
+        width: 280px;
+      }
+
+      .artist-name:hover {
+        cursor: cell;
+      }
+
+      .option-buttons {
+        display: grid;
+        grid-template-columns: 50px 50px 50px 50px;
+        gap: 30px;
+        text-align:right;
+        justify-self: end;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 25px;
+        margin-right: 35px;
+        margin-top: 23px;
+        letter-spacing: 2px;
+      }
+
+      .home:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #ff4081;
+      }
+
+      .music:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #ff4081;
+
+      }
+      .merch:hover {
+        text-decoration: underline;
+        cursor:pointer;
+        color: #ff4081;
+
+      }
+      .tour:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #ff4081;
+
+      }
+      
+      .text-overlay {
+        display: flex;
+      }
+
+      .social-icons {
+        display: flex;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        position: absolute;
+        justify-content: end;
+        bottom: 10px;
+        right: 20px;
+      }
+
+      .social-icons img {
+        width: 34;
+      }
+
+      .left-box {
+        position: absolute;
+        top: 7.5vh;
+        left: 0;
+        width: 100vw;
+        height: 72vh;
+        background-color #b4c8b3;
+        overflow: hidden;
+        background-image: url('bg1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .left-box img {
+
+      }
+
+      .listen-container {
+        border-style: solid;
+        border-color: black;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        bottom: 130px;
+        color: black;
+      }
+
+      .listen-button:hover,
+      .listen-container:hover {
+        background-color:#ff4081;
+        border-color: #ff4081;
+        cursor: pointer;
+        transition: 0.4s;
+        color: #f8f6e9;
+        font-size: 28px;
+        font-weight: 400;
+      }
+
+      .overlay-image {
+  position: absolute;
+  top: 20vh; /* adjust position */
+  left: 10vw;
+  width: 300px; /* or whatever size you want */
+  z-index: 2;
+  scale: 5.6;
+  top: 360px;
+  left: 620px;
+}
+
+      .artist-image {
+        position: absolute;
+        top: 20vh; /* adjust position */
+  left: 10vw;
+  width: 300px; /* or whatever size you want */
+  z-index: 2;
+  scale: 5.6;
+  top: 160px;
+  left: 1190px;
+        scale: 170%;
+        z-index: 2;
+      }
+
+      .listen-button {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 25px;
+        text-align: center;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 0;
+        margin-top: 0;
+        letter-spacing: 6px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+      .legal-container {
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        bottom: 10px;
+      }
+
+      .youtube:hover {
+        cursor: pointer;
+      }
+
+      .tiktok:hover {
+        cursor: pointer;
+      }
+
+      .instagram:hover {
+        cursor: pointer;
+      }
+
+      .legal-text {
+        text-align: center;
+        font-size: 9px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="bakcground-image">
+      <div class="logo-left"> <p class="artist-name">Myles x Malcolm</p>
+      <div class="option-buttons">
+        <div class="Home"><p>Home</p></div>
+        <div class="Music"><p>Music</p></div>
+        <div class="Merch"><p>Merch</p></div>
+        <div class="tour"><p>Tour</p></div>
+      </div>
+    </div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/mylesxmalcolm/?hl=en" target="_blank">
+        <img src="img.icons8.png" class="Instagram">
+        </a>
+        <img class="YouTube" src="img.icons8-1.png">
+        <img class="TikTok" src="img.icons8-2.png">
+    </div>  
+
+    <a href="https://open.spotify.com/artist/6lhKGxNfOq60mvsxVKGm8T?si=DhV53BTuQqCAHrw7M5pUAw" target="_blank">
+      <div class="listen-container">
+        <p class="listen-button">Listen Now</p>
+      </div>
+    </a>
+
+    <div class="left-box">
+      <img src="lineimage.png" class="overlay-image">
+      <img src="artistflick.jpg" class="artist-image">
+      <img src="bg1.jpg">
+    </div>
+    <div class="legal-container"><p class="legal-text">© 2025 JACKSON MUSIC ENTERTAINMENT. ALL RIGHTS RESERVED. | TERMS AND CONDITIONS | PRIVACY POLICY | HOW WE USE YOUR DATA | YOUR CALIFORNIA PRIVACY RIGHTS | DO NOT SELL MY PERSONAL INFORMATION | SEND US FEEDBACK</p></div>
+    <img src="">
+   
+  </body>  
+</html>
