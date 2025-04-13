@@ -82,7 +82,7 @@
       }
 
       .legal-container {
-        position: absolute;
+        position: fixed;
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
@@ -113,7 +113,7 @@
       }
 
       .buttons-bottom-center button {
-        padding: 1.2vh 2vw;
+        padding: 2vh 2vw;
         font-size: clamp(1rem, 2.5vw, 1.5rem);
         background-color: transparent;
         color: white;
@@ -141,6 +141,18 @@
       }
       }
 
+      @media (min-width: 600px) {
+  .buttons-bottom-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .buttons-bottom-center {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 
 
 
@@ -152,7 +164,9 @@
    
     <div class="background-image-container">
       <img class="background-image" src="images/IMG_1349.jpg">
-      <div class="vinyl-record">
+      <div class="music-update">
+        <div class="inner-music-update"></div>
+        <p class="update-text">'Composure' latest single out now!</p>
       </div>
       <div class="banner-container">
         
