@@ -1,255 +1,185 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Artist Website
-    </title>
+    <title>MxM | Official Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.typekit.net/pab8acp.css">
     <style>
       * {
         margin: 0;
         padding: 0;
-      }
-      p {
-        
+        box-sizing: border-box;
+
       }
 
-      body {
-        background-color: #f8f6e9;
-        height: 100vh;
+      .background-image-container {
+        position: relative;
         width: 100vw;
-        margin: 0;
-        padding: 0;
-      }
-
-      .background-image {
-        background-image: url('');
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 100vh;
-        width: 100vh;
-        display: flex;
-      }
-
-      .logo-left {
-        width: 50vh 50vh;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-left: 2vw;
-      }
-
-      .artist-name {
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 250%;
-        margin-top: 1.5vh;
-        margin-left: 0vw;
-        letter-spacing: 0.6vw;
-        margin-right: 0;
-        width: 50vw;
-      }
-
-      .artist-name:hover {
-        cursor: cell;
-      }
-
-      .option-buttons {
-        display: grid;
-        width: 30vw;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 0.1vw;
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 175%;
-        margin-right: 0;
-        margin-top: 2.5vh;
-        margin-left: auto;
-        letter-spacing: 0.1vw;
-        text-align: center;
-      }
-
-      .home:hover {
-        text-decoration: underline;
-        cursor: pointer;
-        color: #ff4081;
-      }
-
-      .music:hover {
-        text-decoration: underline;
-        cursor: pointer;
-        color: #ff4081;
-
-      }
-      .merch:hover {
-        text-decoration: underline;
-        cursor:pointer;
-        color: #ff4081;
-
-      }
-
-      .tour:hover {
-        text-decoration: underline;
-        cursor: pointer;
-        color: #ff4081;
-
-      }
-      
-      .text-overlay {
-        display: flex;
-      }
-
-      .social-icons {
-        display: flex;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1vw;
-        position: absolute;
-        justify-content: end;
-        bottom: 1%;
-        right: 1%;
-      }
-
-      .social-icons img {
-        width: 34;
-      }
-
-      .left-box {
-        position: absolute;
-        top: 7.5vh;
-        left: 0;
-        width: 100vw;
-        height: 72vh;
-        background-color #b4c8b3;
         overflow: hidden;
-        background-image: url('bg1.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
+    }
 
-      .left-box img {
-
-      }
-
-      .listen-container {
-        border-style: solid;
-        border-color: black;
-        left: 50%;
-        transform: translateX(-50%);
+    .background-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center bottom;
+        display: block;
         position: absolute;
-        bottom: 12vh;
-        color: black;
-      }
-
-      .listen-button:hover,
-      .listen-container:hover {
-        background-color:#ff4081;
-        border-color: #ff4081;
-        cursor: pointer;
-        transition: 0.4s;
-        color: #f8f6e9;
-        font-size: 28px;
-        font-weight: 400;
-      }
-
-      .overlay-image {
-  position: absolute;
-  top: 20vh; /* adjust position */
-  left: 10vw;
-  width: 17vw; /* or whatever size you want */
-  z-index: 2;
-  scale: 5.6;
-  top: 360px;
-  left: 620px;
-}
-
-      .artist-image {
-        position: absolute;
-        top: 20vh; /* adjust position */
-  left: 10vw;
-  width: 300px; /* or whatever size you want */
-  z-index: 2;
-  scale: 5.6;
-  top: 160px;
-  left: 1190px;
-        scale: 170%;
+        top: 0;
+        left: 0;
         z-index: 2;
       }
 
-      .listen-button {
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 25px;
-        text-align: center;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        margin-bottom: 0;
-        margin-top: 0;
-        letter-spacing: 6px;
-        padding-left: 40px;
-        padding-right: 40px;
+      .banner-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        justify-content: space-between;
+        padding: 2vh 0 2vh 4vw;
+        z-index: 2;
+      }
+
+      .artist-logo {
+        max-width: 100%;
+        height: auto;
+        align-self: start;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .top-right-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 3%;
+      }
+
+      .social-links {
+        display: flex;
+        scale: 0.42;
+        gap: 3vw;
+        transform-origin: right; /* so scale aligns to the right edge */
+      }
+
+      .social-links img {
+        width: 6vh; /* or whatever size looks good */
+         height: 6vh;
+      }
+      
+      .tiktok-button {
+        scale: 0.9;
+      }
+
+
+      .music-button:hover {
+        cursor: pointer;
+      }
+
+      .merch-button:hover {
+        cursor: pointer;
+      }
+      .shows-button:hover {
+        cursor: pointer;
       }
 
       .legal-container {
-        left: 50%;
-        transform: translateX(-50%);
         position: absolute;
         bottom: 10px;
-      }
-
-      .youtube:hover {
-        cursor: pointer;
-      }
-
-      .tiktok:hover {
-        cursor: pointer;
-      }
-
-      .instagram:hover {
-        cursor: pointer;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 2;
+        width: 30%;
       }
 
       .legal-text {
-        text-align: center;
-        font-size: 9px;
+        font-size: clamp(0.5rem, 2.5vw, 0.1rem);
+        color: #ccc;
+
       }
+
+
+      .buttons-bottom-center {
+  position: absolute;
+  bottom: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4vw;
+  z-index: 2;
+}
+
+.buttons-bottom-center {
+  position: absolute;
+  bottom: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6vw;
+  z-index: 2;
+}
+
+.buttons-bottom-center button {
+  padding: 0.9vh 3vw;
+  font-size: clamp(1rem, 2.5vw, 1.7rem);
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: 0.9px solid white;
+  border-radius: 56px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  font-family: "big-caslon-fb";
+}
+
+.buttons-bottom-center button:hover {
+  background-color: #d495e9;
+}
+
 
     </style>
   </head>
-
+ 
+ 
   <body>
-    <div class="bakcground-image">
-      <div class="logo-left"> <p class="artist-name">Myles x Malcolm</p>
-      <div class="option-buttons">
-        <div class="Home"><p>Home</p></div>
-        <div class="Music"><p>Music</p></div>
-        <div class="Merch"><p>Merch</p></div>
-        <div class="tour"><p>Tour</p></div>
+    <div class="background-image-container">
+      <img class="background-image" src="images/IMG_1349.jpg">
+  
+      <div class="banner-container">
+        
+        <div class="logo-container">
+          <img class="artist-logo" src="images/mxm-logo1.png">
+        </div>
+  
+        <div class="top-right-container">
+  
+          <div class="social-links">
+            <img class="insta-button" src="images/icons8-instagram-32.png">
+            <img class="youtube-button" src="images/icons8-youtube-50.png">
+            <img class="tiktok-button" src="images/icons8-tiktok-50.png">
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="buttons-bottom-center">
+        <button>New Music</button>
+        <button>Shop</button>
+        <button>See Live</button>
       </div>
     </div>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/mylesxmalcolm/?hl=en" target="_blank">
-        <img src="images/img.icons8.png" class="Instagram">
-        </a>
-        <img class="YouTube" src="images/img.icons8-1.png">
-        <img class="TikTok" src="images/img.icons8-2.png">
-    </div>  
-
-    <a href="https://open.spotify.com/artist/6lhKGxNfOq60mvsxVKGm8T?si=DhV53BTuQqCAHrw7M5pUAw" target="_blank">
-      <div class="listen-container">
-        <p class="listen-button">Listen Now</p>
-      </div>
-    </a>
-
-    <div class="left-box">
-      <img src="images/lineimage.png" class="overlay-image">
-      <img src="images/artistflick.jpg" class="artist-image">
-      <img src="images/bg1.jpg">
+  
+    <div class="legal-container">
+      <p class="legal-text">© 2025 MxM MUSIC ENTERTAINMENT. ALL RIGHTS RESERVED. | TERMS AND CONDITIONS | PRIVACY POLICY | HOW WE USE YOUR DATA | YOUR CALIFORNIA PRIVACY RIGHTS | DO NOT SELL MY PERSONAL INFORMATION | SEND US FEEDBACK</p>
     </div>
-    <div class="legal-container"><p class="legal-text">© 2025 JACKSON MUSIC ENTERTAINMENT. ALL RIGHTS RESERVED. | TERMS AND CONDITIONS | PRIVACY POLICY | HOW WE USE YOUR DATA | YOUR CALIFORNIA PRIVACY RIGHTS | DO NOT SELL MY PERSONAL INFORMATION | SEND US FEEDBACK</p></div>
-    <img src="">
-   
-  </body>  
-</html>
+  </body>
+  </html>
