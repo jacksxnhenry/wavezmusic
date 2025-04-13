@@ -81,15 +81,23 @@
 
       }
 
-      .legal-container {
-        position: fixed;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        z-index: 2;
-        width: 70%;
-      }
+.background-image-container {
+  position: relative;
+  min-height: 100vh; /* or a specific height */
+}
+
+.legal-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+}
 
       .legal-text {
         font-size: clamp(0.5rem, 2.5vw, 0.1rem);
