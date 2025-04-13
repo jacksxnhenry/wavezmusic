@@ -29,9 +29,9 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: 1;
       }
-
+   
       .banner-container {
         position: absolute;
         top: 0;
@@ -60,35 +60,25 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        padding-right: 3%;
+        padding-right: 2%;
       }
 
       .social-links {
         display: flex;
-        scale: 0.42;
-        gap: 3vw;
         transform-origin: right; /* so scale aligns to the right edge */
+        gap: 0.1vw;
       }
 
       .social-links img {
-        width: 6vh; /* or whatever size looks good */
-         height: 6vh;
+        height: 4.2vh;
+        scale: 0.65;
+        transition: transform 0.2s ease, opacity 0.2s ease;
       }
       
-      .tiktok-button {
-        scale: 0.9;
-      }
-
-
-      .music-button:hover {
+      .social-links img:hover {
+        transform: scale(1.1);
         cursor: pointer;
-      }
 
-      .merch-button:hover {
-        cursor: pointer;
-      }
-      .shows-button:hover {
-        cursor: pointer;
       }
 
       .legal-container {
@@ -98,7 +88,7 @@
         transform: translateX(-50%);
         text-align: center;
         z-index: 2;
-        width: 30%;
+        width: 70%;
       }
 
       .legal-text {
@@ -107,43 +97,51 @@
 
       }
 
-
       .buttons-bottom-center {
-  position: absolute;
-  bottom: 8vh;
-  left: 50%;
-  transform: translateX(-50%);
-  display: grid;
-  grid-auto-flow: column;
-  gap: 4vw;
-  z-index: 2;
-}
+        position: absolute;
+        bottom: 8vh;
+        left: 50%;
+        transform: translateX(-50%);
+        display: grid;
+        gap: 2vh;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        width: 90%;
+        max-width: 1300px;
+        z-index: 2;
+        gap: 4vw;
 
-.buttons-bottom-center {
-  position: absolute;
-  bottom: 8vh;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 6vw;
-  z-index: 2;
-}
+      }
 
-.buttons-bottom-center button {
-  padding: 0.9vh 3vw;
-  font-size: clamp(1rem, 2.5vw, 1.7rem);
-  background-color: rgba(255, 255, 255, 0);
-  color: white;
-  border: 0.9px solid white;
-  border-radius: 56px;
-  cursor: pointer;
-  transition: background 0.4s ease;
-  font-family: "big-caslon-fb";
-}
+      .buttons-bottom-center button {
+        padding: 1.2vh 2vw;
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+        background-color: transparent;
+        color: white;
+        border: 0.8px solid white;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: "big-caslon-fb";
+        width: 100%;
+        letter-spacing: 0.03em;
+      }
 
-.buttons-bottom-center button:hover {
-  background-color: #d495e9;
-}
+      .buttons-bottom-center button:hover {
+        background-color: #d495e9;
+        filter: brightness(1);
+        transform: scale(1.1);
+        letter-spacing: 0.05em;
+      }
+
+      @media (max-width: 600px) {
+      .buttons-bottom-center {
+        bottom: 16vh; /* Moves buttons higher */
+        grid-template-columns: 90vw; /* Stack in one column */
+        gap: 3vh; /* Adjust vertical gap */
+      }
+      }
+
+
 
 
     </style>
@@ -151,9 +149,11 @@
  
  
   <body>
+   
     <div class="background-image-container">
       <img class="background-image" src="images/IMG_1349.jpg">
-  
+      <div class="vinyl-record">
+      </div>
       <div class="banner-container">
         
         <div class="logo-container">
@@ -163,18 +163,19 @@
         <div class="top-right-container">
   
           <div class="social-links">
-            <img class="insta-button" src="images/icons8-instagram-32.png">
-            <img class="youtube-button" src="images/icons8-youtube-50.png">
-            <img class="tiktok-button" src="images/icons8-tiktok-50.png">
+            <a href="https://www.instagram.com/mylesxmalcolm/?hl=en" target="_blank"><img class="insta-button" src="images/icons8-instagram-32.png"></a>
+            <a href="https://www.youtube.com/channel/UCMNDcyTz_XeyB3UFG1r49sQ" target="_blank"><img class="youtube-button" src="images/icons8-youtube-50.png"></a>
+            <a href="tiktok.com" target="_blank"><img class="tiktok-button" src="images/icons8-tiktok-36.png"></a>
           </div>
         </div>
   
       </div>
   
       <div class="buttons-bottom-center">
-        <button>New Music</button>
+        <a href="https://linktr.ee/mylesxmalcolm?fbclid=PAZXh0bgNhZW0CMTEAAaYfwvEaKAt-orDlPaFPqdXTN2PBXzLtTvFfkAyuvPIQ0zpzLtVjfsetNHI_aem_IU5seLdTXPtAQtDRXX0BTw" target="_blank"><button>New Music</button></a>
         <button>Shop</button>
-        <button>See Live</button>
+        <button>Shows</button>
+        <button>Connect</button>
       </div>
     </div>
   
