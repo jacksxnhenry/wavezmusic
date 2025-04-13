@@ -16,7 +16,7 @@
       .background-image-container {
         position: relative;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
         overflow: hidden;
     }
 
@@ -81,10 +81,6 @@
 
       }
 
-      .background-image-container {
-  position: relative;
-  min-height: 100vh; /* or a specific height */
-}
 
 .legal-container {
   position: absolute;
@@ -92,10 +88,11 @@
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   color: white;
   padding: 0.5vh 0;
+  margin-top: 4vh;
 }
 
       .legal-text {
@@ -142,21 +139,26 @@
 
       @media (max-width: 600px) {
       .buttons-bottom-center {
-        bottom: 16vh; /* Moves buttons higher */
+        bottom: 12vh; /* Moves buttons higher */
         grid-template-columns: 90vw; /* Stack in one column */
         gap: 3vh; /* Adjust vertical gap */
+        transition: ease 0.3s;
       }
       }
 
       @media (min-width: 600px) {
   .buttons-bottom-center {
+    bottom: 10vh;
     grid-template-columns: repeat(2, 1fr);
+    transition: ease 0.3s;
   }
 }
 
 @media (min-width: 900px) {
   .buttons-bottom-center {
+    bottom: 8vh;
     grid-template-columns: repeat(4, 1fr);
+    transition: ease 0.3s;
   }
 }
 
@@ -198,10 +200,11 @@
         <button>Shows</button>
         <button>Connect</button>
       </div>
+      <div class="legal-container">
+        <p class="legal-text">© 2025 MxM MUSIC ENTERTAINMENT. ALL RIGHTS RESERVED. | TERMS AND CONDITIONS | PRIVACY POLICY | HOW WE USE YOUR DATA | YOUR CALIFORNIA PRIVACY RIGHTS | DO NOT SELL MY PERSONAL INFORMATION | SEND US FEEDBACK</p>
+      </div>
     </div>
   
-    <div class="legal-container">
-      <p class="legal-text">© 2025 MxM MUSIC ENTERTAINMENT. ALL RIGHTS RESERVED. | TERMS AND CONDITIONS | PRIVACY POLICY | HOW WE USE YOUR DATA | YOUR CALIFORNIA PRIVACY RIGHTS | DO NOT SELL MY PERSONAL INFORMATION | SEND US FEEDBACK</p>
-    </div>
+
   </body>
   </html>
